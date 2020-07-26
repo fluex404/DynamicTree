@@ -29,11 +29,11 @@ CREATE TABLE `category` (
   PRIMARY KEY (`id`),
   KEY `parent_id` (`parent_id`),
   CONSTRAINT `category_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `category` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `category` */
 
-insert  into `category`(`id`,`parent_id`,`name`,`created_date`,`update_dated`) values (4,NULL,'Komputer','2020-07-26 07:51:15','2020-07-26 07:51:15'),(5,NULL,'Elektronik','2020-07-26 07:51:17','2020-07-26 07:51:17'),(6,NULL,'Fashion','2020-07-26 07:51:17','2020-07-26 07:51:17'),(8,4,'Laptop','2020-07-26 07:53:49','2020-07-26 07:53:49'),(9,4,'Dekstop','2020-07-26 07:53:49','2020-07-26 07:53:49'),(10,8,'Asus','2020-07-26 07:54:18','2020-07-26 07:54:18'),(11,8,'Acer','2020-07-26 07:54:18','2020-07-26 07:54:18');
+insert  into `category`(`id`,`parent_id`,`name`,`created_date`,`update_dated`) values (4,NULL,'Komputer','2020-07-26 07:51:15','2020-07-26 07:51:15'),(5,NULL,'Elektronik','2020-07-26 07:51:17','2020-07-26 07:51:17'),(6,NULL,'Fashion','2020-07-26 07:51:17','2020-07-26 07:51:17'),(8,4,'Laptop','2020-07-26 07:53:49','2020-07-26 07:53:49'),(9,4,'Dekstop','2020-07-26 07:53:49','2020-07-26 07:53:49'),(10,8,'Asus','2020-07-26 07:54:18','2020-07-26 07:54:18'),(11,8,'Acer','2020-07-26 07:54:18','2020-07-26 07:54:18'),(12,10,'Asus ROG XXX',NULL,NULL),(13,10,'Asus K46C',NULL,NULL),(14,11,'Acer J20',NULL,NULL),(15,6,'Pria',NULL,NULL),(16,6,'Wanita',NULL,NULL),(17,6,'Anak - Anak',NULL,NULL),(19,15,'Baju',NULL,NULL),(20,15,'Celana',NULL,NULL),(21,15,'Daleman',NULL,NULL),(22,15,'Sepatu',NULL,NULL),(23,15,'Sendal',NULL,NULL);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
