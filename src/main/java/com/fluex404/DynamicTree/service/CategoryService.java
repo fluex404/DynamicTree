@@ -30,8 +30,9 @@ public class CategoryService {
         jdbcTemplate.query(sql, rs -> {
             ModelMap m = new ModelMap();
 
-            m.put("id", rs.getLong("id"));
-            m.put("name", rs.getString("name"));
+//            m.put("id", rs.getLong("id"));
+            m.put("text", rs.getString("name"));
+            m.put("icon", "fa fa-list-alt");
 
             List<ModelMap> nodes = new ArrayList<>();
             categoryTree(rs.getLong("id"), nodes);
